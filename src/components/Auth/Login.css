@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;500&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#left-panel {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
 hr {
   color: #1d69e5;
   width: 3rem;
@@ -22,7 +34,22 @@ span {
   font-weight: normal;
   font-size: 15px;
   line-height: 26px;
+  width: 60%;
+  color: #1d69e5;
+}
 
+input::placeholder {
+  color: #1d69e5;
+  opacity: 1;
+}
+::-webkit-input-placeholder {
+  color: red;
+}
+input:-ms-input-placeholder {
+  color: #1d69e5;
+}
+
+input::-ms-input-placeholder {
   color: #1d69e5;
 }
 
@@ -34,7 +61,19 @@ span {
 .recover-password {
   display: block;
   color: #5594ef;
-  margin-left: auto;
+
+  text-align: right;
+}
+
+.form-outer-text {
+  color: #5594ef;
+  font-size: 14px;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.form-outer-text a {
+  font-weight: bold;
 }
 
 #right-panel {
@@ -85,6 +124,7 @@ span {
 }
 .logos-container {
   display: flex;
+  justify-content: center;
 }
 .logo-icon {
   display: block;

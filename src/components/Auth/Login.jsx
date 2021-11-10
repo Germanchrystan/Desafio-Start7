@@ -1,9 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import swal from 'sweetalert';
+
 import './Login.css';
 import {loginRequest} from './../../actions/Auth';
 import Logo from './../../assets/logo.png';
 import GoogleLogo from './../../assets/GoogleLogo.png';
 import FacebookLogo from './../../assets/FacebookLogo.png';
+
 
 const initialFormData = {
     username:'',
@@ -28,7 +31,7 @@ function Login() {
             formData.password.trim() ==='') {
                 alert('Por favor, preencha o formulário')
             }
-        loginRequest(formData);
+        loginRequest(formData, swal);
     }
 
 
@@ -36,7 +39,7 @@ function Login() {
         <section className="vh-100">
             <div className="container-fluid">
                 <div className="row">
-                <div className="col-sm-6 text-black">
+                <div className="col-sm-6 text-black" style={{margin:'auto'}} id="left-panel">
                     <div className="px-5 ms-xl-4">
                     <hr />
                     <span className="h1 fw-bold mb-0">Bem-vindo de volta!</span>
@@ -45,7 +48,7 @@ function Login() {
 
                     <div className="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
-                    <form onSubmit={(e) => handleSubmit(e)} style={{width: "23rem"}}>
+                    <form onSubmit={(e) => handleSubmit(e)} style={{width: "90%"}}>
 
                         <div className="form-outline mb-4">
                             <input 
@@ -65,7 +68,7 @@ function Login() {
                             placeholder="Senha"
                             type="password" 
                             id="form2Example28" 
-                            className="form-control form-control-lg" />
+                            className="form-control form-control-lg"  required/>
                         </div>
 
                         <p><a href="#!" className="recover-password">Esqueceu sua senha?</a></p>
@@ -75,14 +78,14 @@ function Login() {
                             type="submit" 
                             //className="btn btn-info btn-lg btn-block" 
                             value="Login"
-                            id="login-button" />
+                            id="login-button" required />
                         </div>
-                    <p>OU ENTRE COM</p>
+                    <p className="form-outer-text">OU ENTRE COM</p>
                     <div className="logos-container">
-                        <img src={GoogleLogo} className="logo-icon" alt="google" />
                         <img src={FacebookLogo} className="logo-icon" alt="facebook" />
+                        <img src={GoogleLogo} className="logo-icon" alt="google" />
                     </div>
-                    <p>Ainda não tem uma conta? <a href="#">Cadastre-se</a></p>
+                    <p className="form-outer-text">Ainda não tem uma conta? <a href="#">Cadastre-se</a></p>
                     </form>
                     </div>
 
