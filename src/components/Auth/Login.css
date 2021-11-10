@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;500&display=swap");
+
+hr {
+  color: #1d69e5;
+  width: 3rem;
+  height: 5px;
+  border: solid 5px;
+}
+
+span {
+  font-family: Asap;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+
+  color: #1d69e5;
+}
+
+.subtitle-message {
+  font-family: Asap;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 26px;
+
+  color: #1d69e5;
+}
+
+.logo-img {
+  width: 204.18px;
+  height: 72.6px;
+}
+
+.recover-password {
+  display: block;
+  color: #5594ef;
+  margin-left: auto;
+}
+
+#right-panel {
+  background: #6da3f1;
+  border-radius: 80px 0px 0px 80px;
+  height: 100vh;
+}
+
+.right-panel__content {
+  /* border: 2px solid green; */
+  display: flex;
+  height: 95%;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.right-panel__content__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.help-link {
+  color: white;
+  font-weight: bold;
+}
+
+.svg-container {
+  display: flex;
+  justify-content: center;
+}
+
+#login-button {
+  /* Auto Layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 54px;
+
+  /* Studio/SA-7 */
+  background: #1d69e5;
+  border-radius: 100px;
+  color: white;
+  width: 100%;
+}
+.logos-container {
+  display: flex;
+}
+.logo-icon {
+  display: block;
+}
+
+.footer-p {
+  color: white;
+  font-size: 14px;
+}
